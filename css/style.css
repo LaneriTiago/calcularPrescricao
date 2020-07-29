@@ -1,0 +1,91 @@
+#nav-top {
+    font-family: 'Anton', sans-serif;
+}
+
+#nav-top {
+    height: 75px;
+}
+
+#nav-top {
+    margin-top: 25px;
+}
+
+#fonte-content {
+    font-family: 'Zilla Slab', serif;
+}
+
+
+#navbarNav {
+    justify-content:flex-end;
+}
+
+/*container do background do conteúdo principal*/
+#bg-content {
+    height: 500px;
+    background-color: white;
+    
+}
+
+.titulo-sessao {
+    font-weight: bold;
+    font-size: 16;
+}
+
+/*container do título 'Calculo prescrição da pretensão'*/
+#container-content {
+    height: 420px;
+    background-color: white
+
+}
+
+/*container dos inputs do cálculo da prescrição*/
+#prescricao-form {
+    margin: 3px;
+    margin-top: 6px
+}
+
+#prazo-input {
+    justify-content:flex-end;
+}
+
+
+#input-susp-2 {
+    margin-right: 29px
+}
+
+#container-content2 {
+    height: 560px;
+    background-color: white;
+    margin-left: 5px;
+    margin-top: 10px;
+
+}
+
+#title-inf {
+    font-weight: bold
+}
+
+#container-inf {
+ 
+    height: 500px;
+    background-color:white;
+    text-align: justify;
+    margin: 25px 0 0 0;
+    text-indent: 25px;
+    line-height: 1.5;
+    white-space: 2
+
+}
+
+#tabela-resultado {
+    margin: 10px
+}
+
+#table-style {
+    font-weight: bold
+}
+
+#footer-css {
+    margin: 0 0 25px 10px;
+    width: 500px
+}

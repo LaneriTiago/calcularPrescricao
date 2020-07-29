@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilitários jurídicos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+            <div id="nav-top" class="navbar-brand" href="#"> 
+                <a id="nav-logo">Utilitários jurídicos </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Início <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Cálculos <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+</head>
+<body id="fonte-content">
+    <div class="container-fluid align-self-center mr-3">
+
+        
+        <div class="row">
+            <div id="bg-content" class="col-sm-7">
+                <a class="titulo-sessao"> Cálculo da prescrição da pretensão </a>
+                <div class="row">
+
+                    <div id="container-content" class="col">
+                     <form class="needs-validation" novalidate>
+                       
+
+                        <div id="prescricao-form" class="row">
+                            <div class="col">
+                            <label id="table-style" for="termo-inicial-input" required>Termo inicial</label>
+                            </div>
+                            <div class=col>
+                                
+                            </div>
+                            <div class=col>
+                                <input type="date" class="float-right form-control" id="termo-inicial-input" name="Termo inicial" required>
+                            </div>    
+                        </div>
+
+                        <div id="prescricao-form" class="row">
+                            <div class="col">
+                            <label id="table-style" for="termo-final-input">Termo final</label>
+                            </div>
+                            <div class=col>
+
+                            </div>
+                            <div class=col>
+                            <input id='termo-final-input' type="date" class="float-right form-control" required>
+                        </div>
+                        </div>
+
+                        <div id="prescricao-form" class="row">
+                            <div class="col">
+                            <label id="table-style">Suspensão</label>
+                            </div>
+                        </div>
+
+                        <div id="prescricao-form" class="row">
+                            <div class="col">
+                            <label id="table-style" for="termo-final-input">De:</label>
+                            </div>
+                            <div class=col>
+
+                            </div>
+                            <div class=col>
+                            <input id="input-susp-1" type="date" class="form-control" required>
+                        </div>
+                        </div>
+
+                         <div id="prescricao-form" class="row">
+                            <div class="col">
+                            <label id="table-style" for="termo-final-input">Até:</label>
+                            </div>
+                            <div class=col>
+
+                            </div>
+                            <div class=col>
+                            <input id="input-susp-2" type="date" class="form-control">
+                        </div>
+                        </div>
+
+                        <div id="prescricao-form" class="row">
+                            <button id="btn-calcular" class="btn btn-outline-primary btn-sm" type="submit">Calcular</button>
+                        </div>
+
+                        <div id="resultado-calculo" class="row">
+
+                            <table id="tabela-resultado" class="border-top" style="width:100%">
+                                
+                                <tr class="row">
+                                  <th class="col"></th>
+                                  <th id="table-style" class="col">Termo inicial</th>
+                                  <th id="table-style" class="col">Termo final</th>
+                                  <th id="table-style" class="col">Ano, mês e dia</th>
+                                </tr>
+                                <tr class="row border-top">
+                                  <td id="table-style" class="col" id="td-pz">Período</td>
+                                  <td class="col" id="td-termo-inicial"></td>
+                                  <td class="col" id="td-termo-final"></td>
+                                  <td class="col" id="td-periodo"></td>
+                                </tr>
+                                  <tr class="row border-top">
+                                    <td id="table-style" class="col" id="td-pz-susp">Suspensão</td>
+                                    <td class="col" id="td-termo-inicial-susp"></td>
+                                    <td class="col" id="td-termo-final-susp"></td>
+                                    <td class="col" id="td-periodo-susp"></td>
+                                  </tr>
+
+                                  <tr class="row border-top">
+                                    <td id="table-style"class="col" id="td-pz-susp-diff">Tempo percorrido</td>
+                                    <td class="col" id="td-termo-inicial-susp-diff"></td>
+                                    <td class="col" id="td-termo-final-susp-diff"></td>
+                                    <td class="col" id="td-periodo-susp-diff"></td>
+                                  </tr>
+
+                              </table>
+                            
+                        </div>
+
+                    </form>
+
+                    </div>
+                </div>
+            </div>
+            <div id="container-inf" class="col-sm-3">
+              <ul>  
+              <li>A coluna "Ano, mês e dia" apresenta o período cheio em anos, meses e dias. Os anos e meses quebrados não são computados no cálculo</li>
+              <li>A linha "Tempo percorrido" apresenta a diferença entre o "Período" e a "Suspensão" apenas em dias.</li>
+              <li>O sistema computa corretamente os anos bissextos, os quais têm 366 dias. Se alguma data teve como termo inicial data até 29/02 em ano bissexto, um ano completo terá 366 dias.</li>
+              <li>A cada 4 anos haverá um ano bissextos - ex.: 2020 e 2024 são anos bissextos.</li> 
+              </ul>
+            </div>
+          
+          </div>
+    </div>    
+</body>
+
+<footer>
+
+ 
+<script>
+
+
+</script>
+    <script src="js/moment.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/testes.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+
+            
+    </script>
+
+</html>
